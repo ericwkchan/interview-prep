@@ -1,11 +1,11 @@
-package com.ericchan.interview.algo.arrays.twopointers;
+package com.ericchan.interview.algo.arrays.twopointers.samedirection;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import com.ericchan.interview.algo.twopointers.MoveZeroes;
+import com.ericchan.interview.algo.twopointers.samedirection.MoveZeroes;
 
 public class MoveZeroesTest {
 

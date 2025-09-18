@@ -1,8 +1,8 @@
-package com.ericchan.interview.algo.arrays.twopointers;
+package com.ericchan.interview.algo.arrays.twopointers.samedirection;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.ericchan.interview.algo.twopointers.RemoveDuplicates;
+import com.ericchan.interview.algo.twopointers.samedirection.RemoveDuplicates;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

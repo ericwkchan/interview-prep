@@ -1,6 +1,6 @@
-package com.ericchan.interview.algo.arrays.twopointers;
+package com.ericchan.interview.algo.arrays.twopointers.samedirection;
 
-import com.ericchan.interview.algo.twopointers.LinkedListMiddle;
+import com.ericchan.interview.algo.twopointers.samedirection.LinkedListMiddle;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;

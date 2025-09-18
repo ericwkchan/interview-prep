@@ -1,4 +1,4 @@
-package com.ericchan.interview.algo.twopointers;
+package com.ericchan.interview.algo.twopointers.samedirection;
 
 import java.util.List;
 

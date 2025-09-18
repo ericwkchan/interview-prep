@@ -1,4 +1,4 @@
-package com.ericchan.interview.algo.twopointers;
+package com.ericchan.interview.algo.twopointers.samedirection;
 
 import java.util.Iterator;
 import java.util.function.Function;
@@ -78,7 +78,7 @@ public class LinkedListMiddle {
      *
      */
   }
-  
+
   public static <T> Node<T> buildList(Iterator<String> iter, Function<String, T> f) {
     if (!iter.hasNext()) return null;
     String val = iter.next();
