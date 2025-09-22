@@ -39,4 +39,21 @@ public class MaxSubarraySumK {
 
     return maxSum;
   }
+
+  public static int evenBetterSolution(List<Integer> nums, int k) {
+    int windowSum = 0;
+
+    for (int i = 0; i < k; i++) {
+      windowSum += nums.get(i);
+    }
+    int maxSum = windowSum;
+
+    for (int start = 0, end = k; end < nums.size(); start++, end++) {
+      windowSum -= nums.get(start);
+      windowSum += nums.get(end);
+      maxSum = Math.max(maxSum, windowSum);
+    }
+
+    return maxSum;
+  }
 }
