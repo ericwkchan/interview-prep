@@ -59,6 +59,7 @@ public class LongestSubarrayAtMostTarget {
     for (int right = 0; right < nums.size(); right++) {
       sum += nums.get(right);                // include end
 
+      // goal: maixmize window length while keeping sum valid
       while (left <= right && sum > target) { // shrink until valid
         sum -= nums.get(left);
         left++;
