@@ -45,4 +45,16 @@ public class LinkedListCycle {
      */
     return false;
   }
+
+  /**
+   * This works too but we're using O(N) space
+   */
+
+  public static <T> boolean hasCycleSet(LinkedListCycle.Node<T> head) {
+    java.util.HashSet<LinkedListCycle.Node<T>> seen = new java.util.HashSet<>();
+    for (var cur = head; cur != null; cur = cur.next) {
+      if (!seen.add(cur)) return true; // seen before → cycle
+    }
+    return false;
+  }
 }
