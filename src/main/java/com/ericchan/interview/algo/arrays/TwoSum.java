@@ -17,4 +17,18 @@ public class TwoSum {
     }
     return new int[] {-1, -1};
   }
+
+  public int[] twoSum(int[] nums, int target) {
+    HashMap<Integer, Integer> indexLookup = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+      indexLookup.put(nums[i], i);
+    }
+    for (int i = 0; i < nums.length; i++) {
+      int complement = target - nums[i];
+      if (indexLookup.containsKey(complement) && indexLookup.get(complement) != i) {
+        return new int[] {i, indexLookup.get(complement)};
+      }
+    }
+    return new int[] {};
+  }
 }
