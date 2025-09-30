@@ -54,6 +54,9 @@ class BalancedBinaryTree {
     }
 
     int leftHeight = dfsHeight(node.left);
+    // checking for -1 for left and right height is basically saying
+    // if we are imbalanced at any point in the left or right subtree
+    // deem the whole tree unbalanced
     if (leftHeight == -1) {
       return -1;
     }

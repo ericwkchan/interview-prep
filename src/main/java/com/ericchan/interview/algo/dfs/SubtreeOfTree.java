@@ -65,6 +65,25 @@ public class SubtreeOfTree {
     return equalTree(a.left, b.left) && equalTree(a.right, b.right);
   }
 
+  public static boolean isSameTree2(Node<Integer> root1, Node<Integer> root2) {
+    // if both root 1 and root 2 are null, then they are the same
+    if (root1 == null && root2 == null) return true;
+    // if only one is null, then they are not the same
+    if (root1 == null || root2 == null) return false;
+
+    // both not null
+    // tree are the same if the root valules are the same and they have the same left and right subtrees
+    return root1.val == root2.val && isSameTree2(root1.left, root2.left) && isSameTree2(root1.right, root2.right);
+  }
+
+  public static boolean subtreeOfAnotherTree2(Node<Integer> root, Node<Integer> subRoot) {
+    // if root is null, then a non-null subroot cannot be a subtree
+    if (root == null) return false;
+
+    // check if the two roots are same as is, or check if the left subtree is the same as subroot, or if the right subtree is the same as subroot
+    return isSameTree2(root, subRoot) || subtreeOfAnotherTree2(root.left, subRoot) || subtreeOfAnotherTree2(root.right, subRoot);
+  }
+
 
   // this function builds a tree from input; you don't have to modify it
   // learn more about how trees are encoded in https://algo.monster/problems/serializing_tree
