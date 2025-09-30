@@ -34,6 +34,8 @@ class VisibleNodes {
     }
     int visibleNodes = 0;
 
+    // this is essentially preorder traversal. check current node, and then left and then right
+
     if (node.val >= maxSoFar) {
       visibleNodes++;
     }
@@ -126,4 +128,17 @@ Then realize you can just pass the max instead of recalculating.
 Small examples (increasing path, decreasing path) are great to test logic.
 
   */
+
+  /**
+   * Ramblings: So I know that a visible node is classified as such when root to that specific node has no values
+   * that are greater than that node. basically that node has to the largest in the path from root. If i were to
+   * define a base case, then if the node is null, then we should return 0. aka - 0 visible nodes returned. we need
+   * to traverse the tree and determine for each node whether or not the node is visible. so we need to keep passing
+   * down a max value. and update that max value. if the current node's value is greater or equal to that passed down
+   * max value, we're going to determine that this current node is a visible node and increment by 1. then naturally
+   * we will have to update the new max along this path and check who is greater between the path current max or the
+   * current node's max. this will be passed to the next check in recursion. in order to get the visible nodes
+   * along a tree, we need to check if the current node is a visible node or not and then check its left and right nodes.
+   * we are returning the number of visible nodes call and each call will be incrementing the return value of the number of nodes.
+   */
 }
