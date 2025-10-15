@@ -41,6 +41,7 @@ public class ReconstructItin {
     Map<String, PriorityQueue<String>> edgesToWalk = new HashMap<>();
 
     // Populate the graph: each 'from' maps to a min-heap of possible 'to' airports
+    // O(Edges * log k)
     for (List<String> edge : tickets) {
       String from = edge.get(0);
       String to = edge.get(1);
@@ -65,6 +66,7 @@ public class ReconstructItin {
       if (pqOfRoutes != null && !pqOfRoutes.isEmpty()) {
         // There are still destinations we can travel to from this airport
         // Pick the lexicographically smallest next destination and continue DFS
+        // Polling is O(logk)
         exploreStack.push(pqOfRoutes.poll());
       } else {
         // No more outgoing flights — we’ve reached a “dead end”
