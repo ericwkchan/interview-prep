@@ -1,5 +1,7 @@
 package com.ericchan.interview.algo.easy;
 
+// rokt had variation where its just 1-9 and no leading 0s
+
 public class ValidAbbreviation {
   public static boolean validWordAbbreviation(String word, String abbr) {
     int i = 0, j = 0;

@@ -3,6 +3,7 @@ package com.ericchan.interview.algo.medium;
 import java.util.HashSet;
 import java.util.Set;
 // Leetcode #1055
+// O(source * target)
 public class ShortestStringFormation {
   public int shortestWay(String source, String target) {
     // Pre-check: every target char must exist in source
